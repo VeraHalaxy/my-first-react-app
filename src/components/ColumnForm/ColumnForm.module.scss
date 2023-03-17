@@ -1,0 +1,13 @@
+@use "sass:math";
+@import '../../styles/settings.scss';
+
+.columnForm {
+   display: flex;
+   justify-content: center;
+   align-items: baseline;
+   margin-top: 20px;
+}
+
+.label {
+   margin: 0 8px $base-size 16px;
+}
