@@ -2,7 +2,7 @@ import styles from './Column.module.scss';
 import Card from './../Card/Card';
 import CardForm from './../CardForm/CardForm';
 
-const Column = (props, addCard) => {
+const Column = props => {
    return (
       <article className={styles.column}>
          <h2 className={styles.title}>
@@ -12,7 +12,7 @@ const Column = (props, addCard) => {
          <ul className={styles.cards}>
             {props.cards.map(card => <Card key={card.id} title={card.title} />)}
          </ul>
-         <CardForm action={addCard} />
+         <CardForm action={props.action} columnId={props.id} />
       </article>
    );
 };
